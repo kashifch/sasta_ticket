@@ -46,7 +46,7 @@ CLASS_CODE = Class Code, default value is EC
 UNIT_FARE = Unit Fare, default value is 1160
 WEB_REFERENCE = Web Reference of serached Train, default value is TRN-0000707
 
-#####Example
+###### Example
 
 Following Example uses different values for Train, Unit Fare, Web Refrence and run only the Select Train Task
 
