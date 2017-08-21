@@ -1,8 +1,9 @@
-#Locust Tests
+Locust Tests
+---------------
 
 The tests in this directory utilize the [Locust](http://docs.locust.io/en/latest/) load testing tool.
 
-#Getting Started
+Getting Started
 ---------------
 Get started by first installing Locust and any other prerequisites using the below command (optionally you could 
 create a virtual env before installing the software)  
@@ -45,7 +46,7 @@ CLASS_CODE = Class Code, default value is EC
 UNIT_FARE = Unit Fare, default value is 1160
 WEB_REFERENCE = Web Reference of serached Train, default value is TRN-0000707
 
-#######Example
+######Example
 
 Following Example uses different values for Train, Unit Fare, Web Refrence and run only the Select Train Task
 
