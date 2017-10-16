@@ -1,5 +1,8 @@
+import random
 from base import TrainBase
-from config import SEARCH_TRAIN_URL, SELECT_TRAIN_URL
+from config import DEPARTURE_DATE, DEPARTURE_DATES, SEARCH_TRAIN_URL, SELECT_TRAIN_URL
+
+
 
 
 class TrainPage(TrainBase):
@@ -18,18 +21,23 @@ class TrainPage(TrainBase):
         """
         Search train
         """
+        date = random.choice(DEPARTURE_DATES)
+        dep_date = '&departure_date={}'.format(date)
+        url = SEARCH_TRAIN_URL + dep_date
         self._get(
-            SEARCH_TRAIN_URL,
-            response_string='Successfully fetched available trains',
-            url_group_name="Searh Train"
+            url,
+            response_string='Successfully fetched available trains' or "Operation successful",
+            url_group_name="Search Train"
         )
 
     def select_train(self):
         """
         Visit Course main page
         """
+        dep_date = '&departure_date={}'.format(DEPARTURE_DATE)
+        url = SELECT_TRAIN_URL + dep_date
         self._get(
-            SELECT_TRAIN_URL,
+            url,
             response_string='Successfully fetched train coaches',
             url_group_name="Select Train"
         )
