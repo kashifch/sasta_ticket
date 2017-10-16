@@ -9,7 +9,7 @@ class TrainTasks(TaskSet):
     """
     tasks = {
 
-        SearchTrainsTasks: 1,
+        SearchTrainsTasks: 10,
         SelectTrainsTasks: 1
     }
 

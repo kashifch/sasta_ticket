@@ -2,6 +2,7 @@ from locust import task, TaskSet
 from train import TrainPage
 
 
+
 class SearchTrainsTasks(TaskSet):
     """
     User scripts that tests the login
