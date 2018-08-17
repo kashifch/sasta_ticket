@@ -29,6 +29,10 @@ After running the command visit `http://127.0.0.1:8089` and provide number of us
 users to add per second)
 
 
+To Run Train Tests
+-------------------
+
+
 There are a number of Optional Environment Variables that you can use to change the API URLS
 
 These are 
@@ -51,3 +55,17 @@ WEB_REFERENCE = Web Reference of serached Train, default value is TRN-0000707
 Following Example uses different values for Train, Unit Fare, Web Refrence and run only the Select Train Task
 
     $TASK_SET=SelectTrainsTasks, TRAIN=60, UNIT_FARE=1290, WEB_REFERENCE=TRN-000897 locust --host=htts://Site-name
+    
+    
+    
+To Run Flight Tests
+-------------------
+
+Flight Test is set as default and there is no environment var involved so it can be run directly using
+
+    $ locust --host=http://site_name
+
+Just change the DATE_RANGE_START and DATE_RANGE_END values in config files, the script will get a random
+date between this range for each user
+
+

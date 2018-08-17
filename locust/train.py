@@ -1,11 +1,11 @@
 import random
-from base import TrainBase
+from base import Base
 from config import DEPARTURE_DATE, DEPARTURE_DATES, SEARCH_TRAIN_URL, SELECT_TRAIN_URL
 
 
 
 
-class TrainPage(TrainBase):
+class TrainPage(Base):
 
     """
     Course page Class

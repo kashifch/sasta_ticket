@@ -36,3 +36,10 @@ SELECT_TRAIN_URL = u"/api/v1/train/get_train_coaches/?train={}&origin={}&destina
     UNIT_FARE,
     WEB_REFERENCE
 )
+
+
+SEARCH_FLIGHT_URL = u"/api/v1/flights/get_available_flights/"
+
+DATE_RANGE_START = "2018-08-20"
+
+DATE_RANGE_END = "2018-09-20"

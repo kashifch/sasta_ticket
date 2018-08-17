@@ -1,3 +1,4 @@
+import time
 
 class ApiException(Exception):
     """
@@ -6,7 +7,7 @@ class ApiException(Exception):
     pass
 
 
-class TrainBase(object):
+class Base(object):
     """
     Base class for page objects.
     """
@@ -34,6 +35,10 @@ class TrainBase(object):
             raise Exception(
                 'API request failed with following error code: ' +
                 str(response.status_code)
+            )
+        if "Operation successful" not in response.content:
+            raise Exception(
+                'API request failed to fetch data'
             )
 
     def _get(self, url, response_string="", url_group_name="", cookie=None):
